@@ -15,7 +15,7 @@ elif [ "$args" == "remove_blacklist" ] ; then
 else
   echo "Usage"
   echo " add_whitelist : Add anudeepND whitelist, mmotti's whitelist for regex and commonly whitelistd Pi-hole domains"
-  echo " remove_whitelist : Remove anudeepND whitelist and commonly whitelistd Pi-hole domains"
+  echo " remove_whitelist : Remove anudeepND whitelist, mmotti's whitelist for regex, and commonly whitelistd Pi-hole domains"
   echo " add_blacklist : Add mmotti regex blacklist"
   echo " remove_blacklist : Remove mmotti regex blacklist"
 fi
