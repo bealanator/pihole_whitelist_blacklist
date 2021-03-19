@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "Remove commonly whitelisted domains ..."
 pihole -w -d clients4.google.com
 pihole -w -d clients2.google.com
 

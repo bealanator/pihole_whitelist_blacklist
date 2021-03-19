@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "Adding commonly whitelisted domains ..."
 pihole -w clients4.google.com
 pihole -w clients2.google.com
 
