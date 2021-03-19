@@ -3,7 +3,7 @@
 Basic bash tool to add regex black list from https://github.com/mmotti/pihole-regex as well as the whitelist for false-positives from the regex filters, the commonly white listed Pi-hole domains from https://discourse.pi-hole.net/t/commonly-whitelisted-domains/212, and whitelist from https://github.com/anudeepND/whitelist
 
 # THANKS!
-This wouldn't be possible without https://github.com/mmotti or https://github.com/anudeepND -- Thanks for what you do!
+This wouldn't be possible without https://github.com/mmotti, https://github.com/anudeepND, or the Pi-hole community as a whole -- Thanks for what you do!
 
 ## Pre-Reqs
 
