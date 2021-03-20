@@ -19,3 +19,5 @@ else
   echo " add_blacklist : Add mmotti regex blacklist"
   echo " remove_blacklist : Remove mmotti regex blacklist"
 fi
+echo "Restarting DNS services ..."
+pihole restartdns
