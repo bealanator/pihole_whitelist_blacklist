@@ -18,6 +18,9 @@ else
   echo " remove_whitelist : Remove anudeepND whitelist, mmotti's whitelist for regex, and commonly whitelistd Pi-hole domains"
   echo " add_blacklist : Add mmotti regex blacklist"
   echo " remove_blacklist : Remove mmotti regex blacklist"
+  restart="no"
 fi
-echo "Restarting DNS services ..."
-pihole restartdns
+if [ "$restart" != "no" ] ; then
+  echo "Restarting DNS services ..."
+  pihole restartdns
+fi
