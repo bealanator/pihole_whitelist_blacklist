@@ -1,2 +1,4 @@
 whitelist.*
 regex.*
+whitelist/common_whitelist_add.sh
+whitelist/pihole_common_whitelist.html
