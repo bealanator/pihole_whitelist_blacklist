@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 ########################################################
 # Script to pull whitelist from anudeepND's whitelist  #
-# and from mmotti's regex whitelist or remove from     #
-# Pi-hole sqllite database                             #
+# and from mmotti's regex whitelist, add both plus.    # 
+# Pi-hole commonly whitelisted domains or remove from  #
+# Pi-hole sqlite database                             #
 ########################################################
 
 arg=$1
