@@ -8,13 +8,11 @@ fi
 args=$1
 
 if [ "$args" == "add_whitelist" ] ; then
-  bash $(pwd)/whitelist/gen_whitelist.sh
   bash $(pwd)/whitelist/whitelist.sh update
   bash $(pwd)/whitelist/common_whitelist_add.sh
 elif [ "$args" == "remove_whitelist" ] ; then
-  bash $(pwd)/whitelist/gen_whitelist.sh
   bash $(pwd)/whitelist/whitelist.sh remove
-  bash $(pwd)/whitelist/common_whitelist_remove.sh
+#  bash $(pwd)/whitelist/common_whitelist_remove.sh
 elif [ "$args" == "add_blacklist" ] ; then
   bash $(pwd)/blacklist/blacklist.sh update
 elif [ "$args" == "remove_blacklist" ] ; then
