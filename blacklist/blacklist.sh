@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-############################################
-# Pull black list from mmotti regex list   #
-# Or remove regex blacklist entries from   #
-# Pi-hole sqlite database                  #
-############################################
+##############################################
+# Pull black list from mmotti regex list     #
+# Or remove all regex blacklist entries from #
+# Pi-hole sqlite database                    #
+##############################################
 arg=$1
 
 if [ "$arg" == "update" ] ; then
