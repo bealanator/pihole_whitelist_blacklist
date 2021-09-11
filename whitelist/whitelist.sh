@@ -2,8 +2,8 @@
 ########################################################
 # Script to pull whitelist from anudeepND's whitelist  #
 # and from mmotti's regex whitelist, add both plus.    # 
-# Pi-hole commonly whitelisted domains or remove from  #
-# Pi-hole sqlite database                             #
+# Pi-hole commonly whitelisted domains or remove all   #
+# from Pi-hole sqlite database                         #
 ########################################################
 
 arg=$1
