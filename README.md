@@ -11,7 +11,7 @@ wget is a pre-requesite for this tool.
 
 ## Usage
 
-Clone repo, and change into the directory, run main.sh with your desired argument:
+Clone repo, and change into the directory, run main.sh as sudo/root with your desired argument:
 
 ```
 Usage
