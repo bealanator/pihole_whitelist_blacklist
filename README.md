@@ -16,7 +16,7 @@ Clone repo, and change into the directory, run main.sh as sudo/root with your de
 ```
 Usage
  add_whitelist : Add anudeepND whitelist, mmotti's whitelist for regex and commonly whitelistd Pi-hole domains
- remove_whitelist : Remove anudeepND whitelist, mmotti's whitelist for regex, and commonly whitelistd Pi-hole domains
+ remove_whitelist : Remove whitelist
  add_blacklist : Add mmotti regex blacklist
- remove_blacklist : Remove mmotti regex blacklist
+ remove_blacklist : Remove blacklist
  ```
