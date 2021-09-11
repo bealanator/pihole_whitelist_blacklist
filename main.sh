@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ $(whoami) != "root" ] ; then
+  echo "Please run with sudo/root"
+  exit 1
+fi
+
 args=$1
 
 if [ "$args" == "add_whitelist" ] ; then
