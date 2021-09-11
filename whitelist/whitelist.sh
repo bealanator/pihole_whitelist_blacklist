@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 arg=$1
 
 if [ "$arg" == "update" ] ; then
@@ -10,7 +10,7 @@ if [ "$arg" == "update" ] ; then
   if [ -f whitelist.list ] ; then
     rm whitelist.list
   fi
-
+  bash $(pwd)/whitelist/gen_whitelist.sh
   wget https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt
   echo "Pulling regex whitelist ..."
   wget https://raw.githubusercontent.com/mmotti/pihole-regex/master/whitelist.list
@@ -20,25 +20,13 @@ if [ "$arg" == "update" ] ; then
   sed -i '/^$/d' whitelist.list
 
   echo "Adding domains to whitelist ..."
-    pihole -w $( cat whitelist.txt )
+  bash $(pwd)/whitelist/common_whitelist_add.sh
   echo "Adding regex whitelist  ..."
     pihole -w $( cat whitelist.list )
 elif [ "$arg" == "remove" ] ; then
-  if [ ! -f whitelist.txt ] || [ ! -f whitelist.list ] ; then
-    rm whitelist.txt whitelist.list
-    echo "Pulling whitelist ..."
-    wget https://raw.githubusercontent.com/anudeepND/whitelist/master/domains/whitelist.txt
-    echo "Pulling regex whitelist ..."
-    wget https://raw.githubusercontent.com/mmotti/pihole-regex/master/whitelist.list
-    sed -i '/#/d' whitelist.list
-    sed -i '/#/d' whitelist.txt
-    sed -i '/^$/d' whitelist.txt
-    sed -i '/^$/d' whitelist.list
-  fi
-    echo "Removing white list entries  ..."
-    pihole -w -d $( cat whitelist.txt )
-    echo "Removeing regex whitelist ..."
-    pihole -w -d $( cat whitelist.list )
+  echo "Removing whitelist entries  ..."
+# https://discourse.pi-hole.net/t/bulk-deletion-of-blacklist-whitelist-entries/32925/6
+  sqlite3 /etc/pihole/gravity.db "delete from domainlist where type=0"
 else
   printf "Usage\n update : Download whitelist and add to Pi-hole\n remove : Remove whitelist items added with this script\n"
 fi
