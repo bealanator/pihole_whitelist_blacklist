@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+########################################################
+# Script to pull whitelist from anudeepND's whitelist  #
+# and from mmotti's regex whitelist or remove from     #
+# Pi-hole sqllite database                             #
+########################################################
+
 arg=$1
 
 if [ "$arg" == "update" ] ; then

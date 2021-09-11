@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-
+####################################################
+# Main script used to call other scripts correctly #
+####################################################
 if [ $(whoami) != "root" ] ; then
   echo "Please run with sudo/root"
   exit 1
